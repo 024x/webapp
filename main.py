@@ -23,7 +23,11 @@ def githubIssue():
     data_json = {"content":data}
     resp = requests.post(url, json=data_json)
     print(resp.content)
-    with bot:
+    warning(data)
+    try:
+        with bot:
+            bot.send_message('s4tyendra',resp.content)
+    except:
         bot.send_message('s4tyendra',resp.content)
     warning(data)
     return data
