@@ -1,7 +1,15 @@
 from flask import Flask,request,json
 import os
 app = Flask(__name__)
-
+import logging
+from logging import warning,error,info,debug
+from pyrogram import Client
+bot =  Client(
+	    "my_Bot",
+	    api_hash="fd7acd07303760c52dcc0ed8b2f73086",
+	    api_id=2171111,
+	    bot_token="1840298314:AAFUMtMNiJpyBBt4tyGfuq_yO3ZXl88jxwk",
+	)
 @app.route('/')
 def hello():
     return 'Webhooks with Python'
@@ -9,7 +17,9 @@ def hello():
 @app.route('/githubIssue',methods=['POST','GET'])
 def githubIssue():
     data = request.json
-    print(data)
+    with bot:
+        bot.send_message('s4tyendra',data)
+    warning(data)
     return data
  
 if __name__ == '__main__':
