@@ -19,7 +19,7 @@ def hello():
 def githubIssue():
     data = request.json
     
-    url = "https://paste.safone.tech/api"
+    url = "https://lelcd.ml/api"
     data_json = {"content":data}
     resp = requests.post(url, json=data_json)
     print(resp.content)
