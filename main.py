@@ -4,6 +4,7 @@ app = Flask(__name__)
 import logging
 from logging import warning,error,info,debug
 from pyrogram import Client
+import requests
 bot =  Client(
 	    "my_Bot",
 	    api_hash="fd7acd07303760c52dcc0ed8b2f73086",
@@ -17,8 +18,13 @@ def hello():
 @app.route('/githubIssue',methods=['POST','GET'])
 def githubIssue():
     data = request.json
+    
+    url = "https://paste.safone.tech/api"
+    data_json = {"content":data}
+    resp = requests.post(url, json=data_json)
+    print(resp.content)
     with bot:
-        bot.send_message('s4tyendra',data)
+        bot.send_message('s4tyendra',resp.content)
     warning(data)
     return data
  
