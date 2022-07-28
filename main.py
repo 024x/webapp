@@ -18,17 +18,15 @@ def hello():
 @app.route('/githubIssue',methods=['POST','GET'])
 def githubIssue():
     data = request.json
-    
-    url = "https://lelcd.ml/api"
-    data_json = {"content":data}
-    resp = requests.post(url, json=data_json)
-    print(resp.content)
+    print(data)
     warning(data)
+    with open('json.txt','w') as f:
+        f.write(str(data))
     try:
         with bot:
-            bot.send_message('s4tyendra',resp.content)
+            bot.send_document('s4tyendra','json.txt')
     except:
-        bot.send_message('s4tyendra',resp.content)
+        bot.send_document('s4tyendra','json.txt')
     warning(data)
     return data
  
