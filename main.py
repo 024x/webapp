@@ -13,7 +13,7 @@ bot =  Client(
 	)
 @app.route('/')
 def hello():
-    return 'Webhooks with Python'
+    return {'working':True}
 
 @app.route('/githubIssue',methods=['POST','GET'])
 def githubIssue():
