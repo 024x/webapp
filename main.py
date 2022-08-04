@@ -23,9 +23,9 @@ def wrap(value):
 @app.route('/')
 def test():
   return {
-    'Owner': Naveen,
-    'Telegram': Naveen_xD,
-    'GitHub': Naveen-xd2580
+    'Owner': 'Naveen',
+    'Telegram': 'Naveen_xD',
+    'GitHub': 'Naveen-xd2580',
   }
 
 @app.route('/write', methods=['GET'])
