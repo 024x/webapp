@@ -18,7 +18,7 @@ def wrap(value):
   for element in word_list:
       s.append(element)
   hmm = "\n"
-  x = q(hmm.join(s))
+  x = hmm.join(s)
   return x
 
 @app.route('/')
@@ -32,7 +32,7 @@ def write():
    img = Image.open("nordwood-themes-R53t-Tg6J4c-unsplash.jpg")
    d1 = ImageDraw.Draw(img)
    myFont = ImageFont.truetype("ds.otf", 120)
-   d1.text((65, 10), txt, fill =(0, 0, 0),font=myFont)
+   d1.text((65, 10), q(txt), fill =(0, 0, 0),font=myFont)
    img.save("result.jpg")
    filename = "result.jpg"
    return send_file(filename, mimetype='image/jpeg')
