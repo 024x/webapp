@@ -1,5 +1,6 @@
 import os
 import PIL
+import jsonify
 import logging
 import textwrap 
 import requests 
@@ -22,11 +23,12 @@ def wrap(value):
 
 @app.route('/')
 def test():
-  return {
+  obj = {
     'Owner': 'Naveen',
     'Telegram': 'Naveen_xD',
     'GitHub': 'Naveen-xd2580',
   }
+  return jsonify(obj)
 
 @app.route('/write', methods=['GET'])
 def write():
