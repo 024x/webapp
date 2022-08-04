@@ -1,4 +1,4 @@
-from flask import Flask,request,json
+from flask import Flask,request,json,jsonify
 import os
 import PIL
 from PIL import Image, ImageDraw, ImageFont
@@ -7,11 +7,11 @@ import logging
 from logging import warning,error,info,debug
 import requests
 from flask import send_file
-@app.route('/',methods=['POST'])
+@app.route('/',methods=['get','POST'])
 def hello():
     data = request.json
     print(data)
-    return data
+    return jsonify(data)
 
 @app.route('/hi', methods=['POST'])
 def he():
