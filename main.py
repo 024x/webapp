@@ -14,7 +14,7 @@ def hello():
 @app.route('/hi')
 def he():
     txt = "Hello"
-    img = Image.open("white.jpg")
+    img = Image.open("nordwood-themes-R53t-Tg6J4c-unsplash.jpg")
     d1 = ImageDraw.Draw(img)
     myFont = ImageFont.truetype("ds.otf", 50)
     d1.text((65, 10), txt, fill =(0, 0, 0),font=myFont)
