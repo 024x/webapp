@@ -7,11 +7,9 @@ import logging
 from logging import warning,error,info,debug
 import requests
 from flask import send_file
-@app.route('/',methods=['get','POST'])
+@app.route('/',methods=['get'])
 def hello():
-    data = request.json
-    print(data)
-    return jsonify(data)
+    return {'working':True}
 
 @app.route('/hi', methods=['POST'])
 def he():
