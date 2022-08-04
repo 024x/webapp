@@ -7,11 +7,13 @@ import logging
 from logging import warning,error,info,debug
 import requests
 from flask import send_file
-@app.route('/')
+@app.route('/',methods=['POST'])
 def hello():
-    return {'working':True}
+    data = request.json
+    print(data)
+    return data
 
-@app.route('/hi')
+@app.route('/hi', methods=['POST'])
 def he():
     txt = "Hello"
     img = Image.open("nordwood-themes-R53t-Tg6J4c-unsplash.jpg")
