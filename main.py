@@ -27,8 +27,8 @@ def test():
 
 @app.route('/write', methods=['GET'])
 def write():
-   txxt = request.args.get('text', None)
-   txt = wrap(txxt)
+   txt = request.args.get('text', None)
+   txt = wrap(txt)
    img = Image.open("nordwood-themes-R53t-Tg6J4c-unsplash.jpg")
    d1 = ImageDraw.Draw(img)
    myFont = ImageFont.truetype("ds.otf", 120)
