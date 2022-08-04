@@ -1,9 +1,11 @@
-from flask import Flask,request,json
 import os
-app = Flask(__name__)
 import logging
+import requests 
+from flask import Flask,request,json
 from logging import warning,error,info,debug
-import requests
+
+app = Flask(__name__)
+
 @app.route('/')
 def hello():
     return {'working':True}
