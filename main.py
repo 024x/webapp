@@ -23,12 +23,7 @@ def wrap(value):
 
 @app.route('/')
 def test():
-  obj = {
-    'Owner': 'Naveen',
-    'Telegram': 'Naveen_xD',
-    'GitHub': 'Naveen-xd2580',
-  }
-  return jsonify(obj)
+  return {'working':True}
 
 @app.route('/write', methods=['GET'])
 def write():
