@@ -18,7 +18,7 @@ def hello():
   txt = "Hello"
   img = Image.open("nordwood-themes-R53t-Tg6J4c-unsplash.jpg")
   d1 = ImageDraw.Draw(img)
-  myFont = ImageFont.truetype("ds.otf", 50)
+  myFont = ImageFont.truetype("ds.otf", 120)
   d1.text((65, 10), txt, fill =(0, 0, 0),font=myFont)
   img.save("result.jpg")
   filename = "result.jpg"
@@ -29,7 +29,7 @@ def write():
    txt = request.args.get('text', None)
    img = Image.open("nordwood-themes-R53t-Tg6J4c-unsplash.jpg")
    d1 = ImageDraw.Draw(img)
-   myFont = ImageFont.truetype("ds.otf", 50)
+   myFont = ImageFont.truetype("ds.otf", 120)
    d1.text((65, 10), txt, fill =(0, 0, 0),font=myFont)
    img.save("result.jpg")
    filename = "result.jpg"
