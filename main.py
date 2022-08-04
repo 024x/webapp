@@ -23,7 +23,7 @@ def he():
     return send_file(filename, mimetype='image/jpeg')
 @app.route('/write', methods=['GET'])
 def write():
-    text = request.args.get('text', None)
+    txt = request.args.get('text', None)
     img = Image.open("nordwood-themes-R53t-Tg6J4c-unsplash.jpg")
     d1 = ImageDraw.Draw(img)
     myFont = ImageFont.truetype("ds.otf", 50)
