@@ -12,7 +12,7 @@ def hello():
     return {'working':True}
 
 @app.route('/hi')
-def hello():
+def he():
     txt = "Hello"
     img = Image.open("white.jpg")
     d1 = ImageDraw.Draw(img)
