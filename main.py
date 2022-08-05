@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def test():
-  return {'working':True}
+   return flask.render_template('index.html')
 
 @app.route('/docs', methods=['GET']) 
 def docs():
