@@ -5,6 +5,7 @@ import requests
 from flask import Flask,request,json,send_file
 from logging import warning,error,info,debug
 from PIL import Image, ImageDraw, ImageFont
+import textwrap
 
 app = Flask(__name__)
 
@@ -14,7 +15,15 @@ def test():
 
 @app.route('/write', methods=['GET'])
 def write():
-   txt = request.args.get('text', None)
+   text = request.args.get('text', None)
+   value = text
+   wrapper = textwrap.TextWrapper(width=65)
+   word_list = wrapper.wrap(text=value)
+   s = []
+   for element in word_list:
+       s.append(element)
+   hmm = "\n"
+   txt = (hmm.join(s))
    warning(txt)
    img = Image.open("nordwood-themes-R53t-Tg6J4c-unsplash.jpg")
    d1 = ImageDraw.Draw(img)
