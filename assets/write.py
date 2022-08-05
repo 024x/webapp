@@ -17,7 +17,7 @@ def write(text):
    hmm = "\n"
    txt = (hmm.join(s))
    warning(txt)
-   s1 = textwrap.indent(txt)
+   s1 = textwrap.indent(txt, prefix=' ')
    img = Image.open("nordwood-themes-R53t-Tg6J4c-unsplash.jpg")
    d1 = ImageDraw.Draw(img)
    myFont = ImageFont.truetype("ds.otf", 130)
