@@ -14,9 +14,9 @@ app = Flask(__name__)
 def test():
   return {'working':True}
 
-@app.route('/docs')
+@app.route('/docs', methods=['GET'])
 def docs():
-  return {'coming soon..':True}
+  return {'Status':'Coming Soon'}
 
 @app.route('/write', methods=['GET'])
 def writ():
