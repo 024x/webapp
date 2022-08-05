@@ -14,6 +14,10 @@ app = Flask(__name__)
 def test():
   return {'working':True}
 
+@app.route('/docs')
+def docs():
+  return {'coming soon..':True}
+
 @app.route('/write', methods=['GET'])
 def writ():
    text = request.args.get('text', None)
