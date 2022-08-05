@@ -1,5 +1,6 @@
 import os
 import PIL
+Import flask
 import logging
 import textwrap 
 import requests
