@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def test():
-   return flask.render_template('/app/index.html')
+   return flask.render_template('index.html')
 
 @app.route('/docs', methods=['GET']) 
 def docs():
