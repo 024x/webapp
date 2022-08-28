@@ -12,11 +12,11 @@ from PIL import Image, ImageDraw, ImageFont
 app = Flask(__name__)
 
 @app.route('/')
-def test():
+def home():
    return flask.render_template('index.html')
 
 @app.route('/batname')
-def test():
+def bat_name():
    return flask.render_template('batname.html')
    
 @app.route('/docs', methods=['GET']) 
