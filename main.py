@@ -15,6 +15,10 @@ app = Flask(__name__)
 def test():
    return flask.render_template('index.html')
 
+@app.route('/batname')
+def test():
+   return flask.render_template('batname.html')
+   
 @app.route('/docs', methods=['GET']) 
 def docs():
   return {'Status':'Coming Soon'}
